@@ -1,3 +1,11 @@
-<p>
-  home works!
-</p>
+<mat-toolbar color="primary">
+  <span [routerLink]="['/']">Welcome</span>
+
+  <button mat-button [routerLink]="['/authors']">Authors</button>
+  <button mat-button [routerLink]="['/books']">Books</button>
+  
+  <span class="fill-remaining-space"></span>
+
+  <button mat-button [routerLink]="['/login']">Logout</button>
+</mat-toolbar>
+<router-outlet></router-outlet>

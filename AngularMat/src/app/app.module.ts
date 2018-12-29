@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
+import { ShareModule } from './share.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthorComponent } from './author/author.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]
