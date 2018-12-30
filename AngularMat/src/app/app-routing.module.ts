@@ -6,6 +6,7 @@ import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'authors', pathMatch: 'full' },
   {
     path: '',
     component: HomeComponent,

@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   logining: boolean;
+  user = {
+    username: 'jiangfei@qq.com',
+    password: '123123',
+  };
 
   constructor(private router: Router) {
 

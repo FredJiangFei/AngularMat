@@ -22,13 +22,15 @@ import {
     MatPaginatorModule,
     MatTabsModule,
     MatBadgeModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTableModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CdkTableModule } from '@angular/cdk/table';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     exports: [
@@ -37,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
         FormsModule,
         RouterModule,
         HttpClientModule,
+        BrowserAnimationsModule,
 
         MatToolbarModule,
         MatIconModule,
@@ -59,7 +62,8 @@ import { HttpClientModule } from '@angular/common/http';
         MatTabsModule,
         MatBadgeModule,
         MatPaginatorModule,
-        MatChipsModule
+        MatChipsModule,
+        MatTableModule
     ]
 })
 export class ShareModule { }
