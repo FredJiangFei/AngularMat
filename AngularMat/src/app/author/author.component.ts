@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { NewAuthorComponent } from './new-author/new-author.component';
 
 export interface PeriodicElement {
   position: number;
   name: string;
-  weight: number;
+  gender: string;
   symbol: string;
 }
 
@@ -14,17 +16,27 @@ export interface PeriodicElement {
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','action'];
+  displayedColumns: string[] = ['position', 'name', 'gender', 'symbol', 'action'];
   dataSource: PeriodicElement[] = [
-    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-    {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-    {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-    {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-    {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-    {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+    { position: 1, name: 'Hydrogen', gender: 'Male', symbol: 'H' },
+    { position: 2, name: 'Helium', gender: 'Female', symbol: 'He' },
+    { position: 3, name: 'Lithium', gender: 'Female', symbol: 'Li' },
+    { position: 4, name: 'Beryllium', gender: 'Male', symbol: 'Be' },
+    { position: 5, name: 'Boron', gender: 'Female', symbol: 'B' },
+    { position: 6, name: 'Carbon', gender: 'Male', symbol: 'C' },
+    { position: 7, name: 'Nitrogen', gender: 'Female', symbol: 'N' },
+    { position: 8, name: 'Oxygen', gender: 'Female', symbol: 'O' },
+    { position: 9, name: 'Fluorine', gender: 'Male', symbol: 'F' },
+    { position: 10, name: 'Neon', gender: 'Male', symbol: 'Ne' },
   ];
+
+  constructor(
+    private dialog: MatDialog) { }
+  
+  showNewAuthorModal() {
+    const dialog = this.dialog.open(NewAuthorComponent);
+    dialog.afterClosed().subscribe(result => {
+      console.log(result);
+    });
+  }
 }

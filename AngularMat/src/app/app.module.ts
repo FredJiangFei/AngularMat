@@ -7,7 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
-import { ShareModule } from './share.module';
+import { ShareModule } from './share/share.module';
+import { NewAuthorComponent } from './author/new-author/new-author.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ShareModule } from './share.module';
     LoginComponent,
     HomeComponent,
     BookComponent,
-    AuthorComponent
+    AuthorComponent,
+    NewAuthorComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { ShareModule } from './share.module';
     ShareModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NewAuthorComponent]
 })
 export class AppModule { }

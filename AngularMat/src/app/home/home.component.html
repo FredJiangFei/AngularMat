@@ -3,9 +3,20 @@
 
   <button mat-button [routerLink]="['/authors']">Authors</button>
   <button mat-button [routerLink]="['/books']">Books</button>
-  
+
   <span class="fill-remaining-space"></span>
+
+  <img class="avatar" src="../../../assets/user.png">
+
+  <button mat-button [matMenuTriggerFor]="LanguageMenu">Language</button>
+  <mat-menu #LanguageMenu="matMenu">
+    <button mat-menu-item>SV</button>
+    <button mat-menu-item>EN</button>
+  </mat-menu>
 
   <button mat-button [routerLink]="['/login']">Logout</button>
 </mat-toolbar>
-<router-outlet></router-outlet>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
