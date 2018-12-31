@@ -1,7 +1,7 @@
 <h1>Authors</h1>
 
 <div class="full-width">
-    <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
+  <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
 </div>
 
 <mat-table [dataSource]="dataSource">
@@ -34,7 +34,7 @@
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row  *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 
 <mat-paginator #paginator [pageSize]="2" [pageSizeOptions]="[5, 10, 20]">

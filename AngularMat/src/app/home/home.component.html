@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span [routerLink]="['/']">Welcome</span>
+  <span [routerLink]="['/']">Xcelerator</span>
 
   <button mat-button [routerLink]="['/authors']">Authors</button>
   <button mat-button [routerLink]="['/books']">Books</button>
@@ -8,7 +8,10 @@
 
   <img class="avatar" src="../../../assets/user.png">
 
-  <button mat-button [matMenuTriggerFor]="LanguageMenu">Language</button>
+  <button mat-button [matMenuTriggerFor]="LanguageMenu">
+    Language
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
   <mat-menu #LanguageMenu="matMenu">
     <button mat-menu-item>SV</button>
     <button mat-menu-item>EN</button>
