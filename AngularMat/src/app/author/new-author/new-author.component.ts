@@ -7,9 +7,7 @@ import { MatDialogRef } from '@angular/material';
   styleUrls: ['./new-author.component.css']
 })
 export class NewAuthorComponent {
-  author = {
-
-  }
+  author = {  }
   constructor(private dialogRef: MatDialogRef<NewAuthorComponent>) { }
 
   save() {

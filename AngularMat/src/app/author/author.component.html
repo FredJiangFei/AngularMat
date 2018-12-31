@@ -1,7 +1,6 @@
 <h1>Authors</h1>
 
 <div class="full-width flex-container">
-  
   <span class="fill-remaining-space"></span>
   <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
 </div>
@@ -22,11 +21,6 @@
     <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="symbol">
-    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-  </ng-container>
-
   <ng-container matColumnDef="action">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let element" class="button-row">
@@ -40,5 +34,5 @@
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 
-<mat-paginator #paginator [pageSize]="2" [pageSizeOptions]="[5, 10, 20]">
+<mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]">
 </mat-paginator>
