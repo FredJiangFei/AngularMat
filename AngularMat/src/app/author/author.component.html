@@ -1,6 +1,8 @@
 <h1>Authors</h1>
 
-<div class="full-width">
+<div class="full-width flex-container">
+  
+  <span class="fill-remaining-space"></span>
   <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
 </div>
 
@@ -27,7 +29,8 @@
 
   <ng-container matColumnDef="action">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
-    <mat-cell *matCellDef="let element" class="button-row action-row-end">
+    <mat-cell *matCellDef="let element" class="button-row">
+      <span class="fill-remaining-space"></span>
       <button mat-flat-button color="primary">Edit</button>
       <button mat-flat-button color="warn">Delete</button>
     </mat-cell>

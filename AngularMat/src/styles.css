@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 html, body {
     height: 100%;
@@ -17,9 +18,13 @@ html, body {
 
 .button-row button,
 .button-row a {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
-.action-row-end {
-    text-align: end;
+.flex-container{
+    display: flex;
+}
+
+table {
+    width: 100%;
 }
