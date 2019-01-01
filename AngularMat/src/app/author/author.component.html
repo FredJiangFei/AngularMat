@@ -9,10 +9,10 @@
   <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
 </div>
 
-<mat-table [dataSource]="dataSource">
-  <ng-container matColumnDef="position">
+<mat-table [dataSource]="authors$ | async">
+  <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="name">

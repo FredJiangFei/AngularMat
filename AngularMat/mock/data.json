@@ -1,0 +1,34 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Hydrogen",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "name": "Helium",
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "name": "Lithium",
+      "gender": "Female"
+    },
+    {
+      "id": 4,
+      "name": "Beryllium",
+      "gender": "Male"
+    },
+    {
+      "id": 5,
+      "name": "Boron",
+      "gender": "Female"
+    },
+    {
+      "name": "fre",
+      "gender": "ss",
+      "id": 6
+    }
+  ]
+}

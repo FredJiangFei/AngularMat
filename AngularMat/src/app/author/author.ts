@@ -1,6 +1,6 @@
 
 export interface Author {
-    position: number;
+    id: number;
     name: string;
     gender: string;
 }
