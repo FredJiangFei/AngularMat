@@ -6,7 +6,7 @@
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
   <span class="fill-remaining-space"></span>
-  <button mat-flat-button color="primary" (click)="showNewAuthorModal()">Add</button>
+  <button mat-flat-button color="primary" (click)="showNewModal()">Add</button>
 </div>
 
 <mat-table [dataSource]="authors$ | async">
@@ -29,8 +29,8 @@
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let element" class="button-row">
       <span class="fill-remaining-space"></span>
-      <button mat-flat-button color="primary">Edit</button>
-      <button mat-flat-button color="warn">Delete</button>
+      <button mat-flat-button color="primary" (click)="showEditModal(element)">Edit</button>
+      <button mat-flat-button color="warn"  (click)="showDeleteModal(element)">Delete</button>
     </mat-cell>
   </ng-container>
 

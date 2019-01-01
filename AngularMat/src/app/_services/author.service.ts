@@ -8,6 +8,7 @@ import { tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthorService {
   authorsSubject = new BehaviorSubject<Author[]>([]);
   authors$ = this.authorsSubject.asObservable();
@@ -25,16 +26,13 @@ export class AuthorService {
       );
   }
 
-  edit(id: number, name: string) {
-    const params = {
-      id: id,
-      name: name
-    };
-    return this.http.put<Author>(`${environment.baseUrl}/authors`, params)
+  edit(author: Author) {
+    return this.http.put<Author>(`${environment.baseUrl}/authors/${author.id}`, author)
       .pipe(
         tap(_ => {
-          const currentLine = this.authorsSubject.value.find(x => x.id === id);
-          currentLine.name = name;
+          const currentLine = this.authorsSubject.value.find(x => x.id === author.id);
+          currentLine.name = author.name;
+          currentLine.gender = author.gender;
         })
       );
   }
@@ -43,9 +41,9 @@ export class AuthorService {
     return this.http.delete<Author>(`${environment.baseUrl}/authors/${id}`)
       .pipe(
         tap(_ => {
-          let lines = this.authorsSubject.value;
-          lines = lines.filter(line => line.id !== id);
-          this.authorsSubject.next(lines);
+          let authors = this.authorsSubject.value;
+          authors = authors.filter(line => line.id !== id);
+          this.authorsSubject.next(authors);
         })
       );
   }
@@ -53,7 +51,7 @@ export class AuthorService {
   getAll() {
     return this.http.get<Author[]>(`${environment.baseUrl}/authors`)
       .pipe(
-        tap(lines => this.authorsSubject.next(lines))
+        tap(authors => this.authorsSubject.next(authors))
       );
   }
 }

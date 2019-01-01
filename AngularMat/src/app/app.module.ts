@@ -1,3 +1,4 @@
+import { DelModalComponent } from './author/del-modal/del-modal.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -17,7 +18,8 @@ import { NewAuthorComponent } from './author/new-author/new-author.component';
     HomeComponent,
     BookComponent,
     AuthorComponent,
-    NewAuthorComponent
+    NewAuthorComponent,
+    DelModalComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,6 @@ import { NewAuthorComponent } from './author/new-author/new-author.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [NewAuthorComponent]
+  entryComponents: [NewAuthorComponent, DelModalComponent]
 })
 export class AppModule { }
