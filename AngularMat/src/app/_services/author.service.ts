@@ -30,9 +30,9 @@ export class AuthorService {
     return this.http.put<Author>(`${environment.baseUrl}/authors/${author.id}`, author)
       .pipe(
         tap(_ => {
-          const currentLine = this.authorsSubject.value.find(x => x.id === author.id);
-          currentLine.name = author.name;
-          currentLine.gender = author.gender;
+          const currentAuthor = this.authorsSubject.value.find(x => x.id === author.id);
+          currentAuthor.name = author.name;
+          currentAuthor.gender = author.gender;
         })
       );
   }
@@ -42,7 +42,7 @@ export class AuthorService {
       .pipe(
         tap(_ => {
           let authors = this.authorsSubject.value;
-          authors = authors.filter(line => line.id !== id);
+          authors = authors.filter(author => author.id !== id);
           this.authorsSubject.next(authors);
         })
       );
