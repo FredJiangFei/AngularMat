@@ -25,7 +25,7 @@ export class AuthorComponent implements OnInit {
   showNewModal() {
     const dialog = this.dialog.open(NewAuthorComponent);
     dialog.afterClosed().subscribe(result => {
-      if (result.isSave) {
+      if (result && result.isSave) {
         this.authorService.add(result.author).subscribe();
       }
     });
@@ -35,7 +35,7 @@ export class AuthorComponent implements OnInit {
     const editAuthor = { data: Object.assign({}, author) };
     const dialog = this.dialog.open(NewAuthorComponent, editAuthor);
     dialog.afterClosed().subscribe(result => {
-      if (result.isSave) {
+      if (result && result.isSave) {
         this.authorService.edit(result.author).subscribe();
       }
     });

@@ -16,19 +16,6 @@ html, body {
     flex: 1 1 auto;
 }
 
-.button-row button,
-.button-row a {
-    margin-right: 8px;
-}
-
-.flex-container{
-    display: flex;
-}
-
-table {
-    width: 100%;
-}
-
 button:focus {
     outline: none;
 }
