@@ -5,3 +5,11 @@
     border-radius: 50%;
     margin: 12px;
 }
+
+.home-container{
+  padding-top: 16px;
+  height: 100%;
+  background-color: white;
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
