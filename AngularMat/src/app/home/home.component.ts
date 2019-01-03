@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  darkTheme = false;
   constructor() { }
 
   ngOnInit() {
   }
 
   toggleTheme() {
-
+    this.darkTheme = !this.darkTheme;
   }
 }
