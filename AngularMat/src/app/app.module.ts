@@ -12,6 +12,7 @@ import { ShareModule } from './share/share.module';
 import { NewAuthorComponent } from './author/new-author/new-author.component';
 import { DragComponent } from './drag/drag.component';
 import { ObserverTitleComponent } from './observer-title/observer-title.component';
+import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ObserverTitleComponent } from './observer-title/observer-title.componen
     NewAuthorComponent,
     DelModalComponent,
     DragComponent,
-    ObserverTitleComponent
+    ObserverTitleComponent,
+    FilePreviewOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,6 @@ import { ObserverTitleComponent } from './observer-title/observer-title.componen
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [NewAuthorComponent, DelModalComponent]
+  entryComponents: [NewAuthorComponent, DelModalComponent, FilePreviewOverlayComponent]
 })
 export class AppModule { }

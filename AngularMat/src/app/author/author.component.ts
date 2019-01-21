@@ -1,10 +1,13 @@
+import { FilePreviewOverlayService } from './../_services/file-preview-overlay.service';
 import { DelModalComponent } from './del-modal/del-modal.component';
 import { AuthorService } from './../_services/author.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewAuthorComponent } from './new-author/new-author.component';
 import { Author } from './author';
 import { reduce, map } from 'rxjs/operators';
+import { ComponentPortal, CdkPortal } from '@angular/cdk/portal';
+import { FilePreviewOverlayRef } from '../_services/file-preview-overlay-ref';
 
 @Component({
   selector: 'app-author',
@@ -18,7 +21,9 @@ export class AuthorComponent implements OnInit {
 
   constructor(
     private authorService: AuthorService,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private filePreview: FilePreviewOverlayService
+  ) {}
 
   ngOnInit() {
     this.authorService.getAll().subscribe();
@@ -56,14 +61,13 @@ export class AuthorComponent implements OnInit {
     this.title = 'change author';
   }
 
-  handleRowClick(row: any) {
-    console.log(row);
-  }
-
-
   getTotalAge() {
     return this.authors$.pipe(
       map(t => t.map(a => a.age).reduce((acc, value) => acc + value, 0))
     );
+  }
+
+  createOverlay() {
+    this.filePreview.open();
   }
 }

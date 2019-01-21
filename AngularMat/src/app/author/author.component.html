@@ -9,6 +9,7 @@
   <span class="fill-remaining-space"></span>
   <button mat-flat-button color="primary" (click)="showNewModal()">Add</button>
   <button mat-flat-button color="primary" (click)="changeTitle()" class="ml-1">Change title</button>
+  <button mat-flat-button color="primary" (click)="createOverlay()" class="ml-1">Create overlay</button>
 </div>
 
 <mat-table [dataSource]="authors$ | async">

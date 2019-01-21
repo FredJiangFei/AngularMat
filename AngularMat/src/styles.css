@@ -21,3 +21,13 @@ html, body {
 button:focus {
     outline: none;
 }
+
+
+.dark-backdrop {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.tm-file-preview-dialog-panel {
+  padding: 32px;
+  background-color: aqua;
+}
