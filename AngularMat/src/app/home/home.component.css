@@ -13,3 +13,7 @@
   margin-top: 16px;
   margin-bottom: 48px;
 }
+
+.mat-drawer-container{
+  background-color: rgb(187, 184, 184);
+}

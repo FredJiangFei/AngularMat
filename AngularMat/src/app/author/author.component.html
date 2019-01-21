@@ -1,16 +1,17 @@
 <app-observer-title>
-    {{title}}
+  {{title}}
+  <span class="fill-remaining-space"></span>
+  <button class="float-right ml-1" mat-flat-button color="primary" (click)="changeTitle()">Change title</button>
+  <button class="float-right ml-1" mat-flat-button color="primary" (click)="createOverlay()">Create overlay</button>
+  <button class="float-right" mat-flat-button color="primary" (click)="showNewModal()">Add</button>
 </app-observer-title>
-<div class="full-width d-flex align-items-center">
+
+<!-- <app-search-author>
   <mat-form-field>
     <input matInput placeholder="Search">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
-  <span class="fill-remaining-space"></span>
-  <button mat-flat-button color="primary" (click)="showNewModal()">Add</button>
-  <button mat-flat-button color="primary" (click)="changeTitle()" class="ml-1">Change title</button>
-  <button mat-flat-button color="primary" (click)="createOverlay()" class="ml-1">Create overlay</button>
-</div>
+</app-search-author> -->
 
 <mat-table [dataSource]="authors$ | async">
   <ng-container matColumnDef="id">
@@ -40,8 +41,8 @@
   <ng-container matColumnDef="action">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let element" class="justify-content-end">
-      <button class="mr-1" mat-flat-button color="primary" (click)="showEditModal(element)">Edit</button>
-      <button mat-flat-button color="warn" (click)="showDeleteModal(element)">Delete</button>
+      <button class="mr-1" mat-flat-button color="primary" (click)="showEditModal(element, $event)">Edit</button>
+      <button mat-flat-button color="warn" (click)="showDeleteModal(element, $event)">Delete</button>
     </mat-cell>
     <mat-footer-cell *matFooterCellDef></mat-footer-cell>
   </ng-container>

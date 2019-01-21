@@ -13,6 +13,7 @@ import { NewAuthorComponent } from './author/new-author/new-author.component';
 import { DragComponent } from './drag/drag.component';
 import { ObserverTitleComponent } from './observer-title/observer-title.component';
 import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
+import { SearchAuthorComponent } from './search-author/search-author.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview
     DelModalComponent,
     DragComponent,
     ObserverTitleComponent,
-    FilePreviewOverlayComponent
+    FilePreviewOverlayComponent,
+    SearchAuthorComponent
   ],
   imports: [
     BrowserModule,

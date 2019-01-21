@@ -38,7 +38,8 @@ export class AuthorComponent implements OnInit {
     });
   }
 
-  showEditModal(author: Author) {
+  showEditModal(author: Author, e: Event) {
+    e.stopPropagation();
     const editAuthor = { data: Object.assign({}, author) };
     const dialog = this.dialog.open(NewAuthorComponent, editAuthor);
     dialog.afterClosed().subscribe(result => {
@@ -48,7 +49,8 @@ export class AuthorComponent implements OnInit {
     });
   }
 
-  showDeleteModal(author: Author) {
+  showDeleteModal(author: Author, e: Event) {
+    e.stopPropagation();
     const dialog = this.dialog.open(DelModalComponent);
     dialog.afterClosed().subscribe(result => {
       if (result) {

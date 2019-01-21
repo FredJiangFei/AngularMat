@@ -17,10 +17,7 @@
         <button mat-button [routerLink]="['/drag']">Drag</button>
     </ng-container>
 
-    <button mat-button [matMenuTriggerFor]="ComponentsMenu">
-      Components
-      <mat-icon>arrow_drop_down</mat-icon>
-    </button>
+    <div id="page-actions-container"> </div>
 
     <mat-menu #ComponentsMenu="matMenu">
       <button [routerLink]="['/table']" mat-menu-item>Table</button>
