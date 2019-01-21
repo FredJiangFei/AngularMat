@@ -1,9 +1,22 @@
-<div [class.unicorn-dark-theme]="darkTheme">
+<mat-sidenav-container [class.unicorn-dark-theme]="darkTheme" [dir]="dir">
+    <mat-sidenav [opened]="isScreenSmall()" [mode]="'over'">
+      <mat-toolbar color="primary">  Angular Material </mat-toolbar>
+      <mat-list role="list">
+          <mat-list-item role="listitem" [routerLink]="['/authors']">Authors</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/books']">Books</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/drag']">Drag</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
   <mat-toolbar color="primary">
     <span [routerLink]="['/']">Angular Material</span>
 
-    <button mat-button [routerLink]="['/authors']">Authors</button>
-    <button mat-button [routerLink]="['/books']">Books</button>
+    <ng-container *ngIf="!isScreenSmall()">
+        <button mat-button [routerLink]="['/authors']">Authors</button>
+        <button mat-button [routerLink]="['/books']">Books</button>
+        <button mat-button [routerLink]="['/drag']">Drag</button>
+    </ng-container>
+
 
     <span class="fill-remaining-space"></span>
 
@@ -13,6 +26,7 @@
       Language
       <mat-icon>arrow_drop_down</mat-icon>
     </button>
+
     <mat-menu #LanguageMenu="matMenu">
       <button mat-menu-item>SV</button>
       <button mat-menu-item>EN</button>
@@ -24,11 +38,13 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item [routerLink]="['/login']">Logout</button>
       <button mat-menu-item (click)="toggleTheme()">Toggle theme</button>
+      <button mat-menu-item (click)="toggleDir()">Toggle dir</button>
     </mat-menu>
   </mat-toolbar>
 
-  <div class="container home-container mat-elevation-z8">
+  <div class="container home-container">
       <router-outlet></router-outlet>
   </div>
-</div>
+
+</mat-sidenav-container>
 

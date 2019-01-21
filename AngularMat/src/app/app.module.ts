@@ -10,6 +10,7 @@ import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { ShareModule } from './share/share.module';
 import { NewAuthorComponent } from './author/new-author/new-author.component';
+import { DragComponent } from './drag/drag.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewAuthorComponent } from './author/new-author/new-author.component';
     BookComponent,
     AuthorComponent,
     NewAuthorComponent,
-    DelModalComponent
+    DelModalComponent,
+    DragComponent
   ],
   imports: [
     BrowserModule,

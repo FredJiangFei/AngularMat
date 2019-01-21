@@ -1,3 +1,26 @@
 <p>
   book works!
 </p>
+
+<div class="my-inner-dialog-content" cdkTrapFocus>
+  <!-- Tab and Shift + Tab will not leave this element. -->
+</div>
+<a mat-list-item routerLink cdkFocusRegionStart>Focus region start</a>
+<a mat-list-item routerLink>Link</a>
+<a mat-list-item routerLink cdkFocusInitial>Initially focused</a>
+<a mat-list-item routerLink cdkFocusRegionEnd>Focus region end</a>
+<div class="example-focus-monitor">
+  <button cdkMonitorSubtreeFocus
+          (cdkFocusChange)="elementOrigin = formatOrigin($event); markForCheck()">
+    Focus Monitored Element ({{elementOrigin}})
+  </button>
+</div>
+
+<div class="example-focus-monitor">
+  <div cdkMonitorSubtreeFocus
+       (cdkFocusChange)="subtreeOrigin = formatOrigin($event); markForCheck()">
+    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>
+    <button>Child Button 1</button>
+    <button>Child Button 2</button>
+  </div>
+</div>
