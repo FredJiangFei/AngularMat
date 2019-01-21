@@ -3,27 +3,32 @@
     {
       "id": 1,
       "name": "Hydrogenewww",
-      "gender": "Male"
+      "gender": "Male",
+      "age": 20
     },
     {
       "id": 2,
       "name": "Helium",
-      "gender": "Female"
+      "gender": "Female",
+      "age": 10
     },
     {
       "id": 3,
       "name": "Lithium",
-      "gender": "Female"
+      "gender": "Female",
+      "age": 35
     },
     {
       "id": 4,
       "name": "Beryllium",
-      "gender": "Male"
+      "gender": "Male",
+      "age": 15
     },
     {
+      "id": 5,
       "name": "sscc",
-      "gender": "www",
-      "id": 5
+      "gender": "Male",
+      "age": 50
     }
   ]
 }

@@ -15,16 +15,25 @@
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    <mat-footer-cell *matFooterCellDef></mat-footer-cell>
   </ng-container>
 
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    <mat-footer-cell *matFooterCellDef> Total age </mat-footer-cell>
   </ng-container>
 
   <ng-container matColumnDef="gender">
     <mat-header-cell *matHeaderCellDef> Gender </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
+    <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
+    <mat-footer-cell *matFooterCellDef> {{getTotalAge() | async}} </mat-footer-cell>
   </ng-container>
 
   <ng-container matColumnDef="action">
@@ -33,10 +42,14 @@
       <button class="mr-1" mat-flat-button color="primary" (click)="showEditModal(element)">Edit</button>
       <button mat-flat-button color="warn" (click)="showDeleteModal(element)">Delete</button>
     </mat-cell>
+    <mat-footer-cell *matFooterCellDef></mat-footer-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"
+          [class.male]="row.gender === 'Male'"
+          (click)="showEditModal(row)"></mat-row>
+   <mat-footer-row *matFooterRowDef="displayedColumns">1</mat-footer-row>
 </mat-table>
 
 <mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]" class="mb-3"></mat-paginator>

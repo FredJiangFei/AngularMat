@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewAuthorComponent } from './new-author/new-author.component';
 import { Author } from './author';
+import { reduce, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-author',
@@ -11,9 +12,9 @@ import { Author } from './author';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'gender', 'action'];
   authors$ = this.authorService.authors$;
   title = 'Authors';
+  displayedColumns: string[] = ['id', 'name', 'gender', 'age', 'action'];
 
   constructor(
     private authorService: AuthorService,
@@ -53,5 +54,16 @@ export class AuthorComponent implements OnInit {
 
   changeTitle() {
     this.title = 'change author';
+  }
+
+  handleRowClick(row: any) {
+    console.log(row);
+  }
+
+
+  getTotalAge() {
+    return this.authors$.pipe(
+      map(t => t.map(a => a.age).reduce((acc, value) => acc + value, 0))
+    );
   }
 }

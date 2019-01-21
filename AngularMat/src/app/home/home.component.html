@@ -17,20 +17,18 @@
         <button mat-button [routerLink]="['/drag']">Drag</button>
     </ng-container>
 
+    <button mat-button [matMenuTriggerFor]="ComponentsMenu">
+      Components
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+
+    <mat-menu #ComponentsMenu="matMenu">
+      <button [routerLink]="['/table']" mat-menu-item>Table</button>
+    </mat-menu>
 
     <span class="fill-remaining-space"></span>
 
     <img class="avatar" src="../../../assets/images/user.png">
-
-    <button mat-button [matMenuTriggerFor]="LanguageMenu">
-      Language
-      <mat-icon>arrow_drop_down</mat-icon>
-    </button>
-
-    <mat-menu #LanguageMenu="matMenu">
-      <button mat-menu-item>SV</button>
-      <button mat-menu-item>EN</button>
-    </mat-menu>
 
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
