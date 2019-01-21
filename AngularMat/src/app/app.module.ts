@@ -11,6 +11,7 @@ import { AuthorComponent } from './author/author.component';
 import { ShareModule } from './share/share.module';
 import { NewAuthorComponent } from './author/new-author/new-author.component';
 import { DragComponent } from './drag/drag.component';
+import { ObserverTitleComponent } from './observer-title/observer-title.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DragComponent } from './drag/drag.component';
     AuthorComponent,
     NewAuthorComponent,
     DelModalComponent,
-    DragComponent
+    DragComponent,
+    ObserverTitleComponent
   ],
   imports: [
     BrowserModule,

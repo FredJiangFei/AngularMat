@@ -13,6 +13,7 @@ import { Author } from './author';
 export class AuthorComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'gender', 'action'];
   authors$ = this.authorService.authors$;
+  title = 'Authors';
 
   constructor(
     private authorService: AuthorService,
@@ -48,5 +49,9 @@ export class AuthorComponent implements OnInit {
         this.authorService.delete(author.id).subscribe();
       }
     });
+  }
+
+  changeTitle() {
+    this.title = 'change author';
   }
 }
