@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',

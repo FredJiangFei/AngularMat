@@ -23,8 +23,10 @@
       <mat-icon>arrow_drop_down</mat-icon>
     </button>
     <mat-menu #cdkmenu="matMenu">
+      <button mat-menu-item  [routerLink]="['/access']">Access</button>
       <button mat-menu-item  [routerLink]="['/layout']">Layout</button>
       <button mat-menu-item  [routerLink]="['/drag']">Drag</button>
+      <button mat-menu-item  [routerLink]="['/observer']">Observer</button>
     </mat-menu>
 
     <span class="fill-remaining-space"></span>

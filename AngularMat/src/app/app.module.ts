@@ -10,11 +10,13 @@ import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { ShareModule } from './share/share.module';
 import { NewAuthorComponent } from './author/new-author/new-author.component';
-import { DragComponent } from './drag/drag.component';
-import { ObserverTitleComponent } from './observer-title/observer-title.component';
 import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
 import { SearchAuthorComponent } from './search-author/search-author.component';
-import { CdkLayoutComponent } from './cdk-layout/cdk-layout.component';
+import { DragComponent } from './cdk/drag/drag.component';
+import { CdkLayoutComponent } from './cdk/cdk-layout/cdk-layout.component';
+import { CdkObserversComponent } from './cdk/cdk-observers/cdk-observers.component';
+import { ObserverTitleComponent } from './cdk/cdk-observers/observer-title/observer-title.component';
+import { AccessComponent } from './cdk/access/access.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { CdkLayoutComponent } from './cdk-layout/cdk-layout.component';
     ObserverTitleComponent,
     FilePreviewOverlayComponent,
     SearchAuthorComponent,
-    CdkLayoutComponent
+    CdkLayoutComponent,
+    CdkObserversComponent,
+    AccessComponent
   ],
   imports: [
     BrowserModule,

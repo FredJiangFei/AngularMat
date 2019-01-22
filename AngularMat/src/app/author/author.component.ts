@@ -6,8 +6,6 @@ import { MatDialog } from '@angular/material';
 import { NewAuthorComponent } from './new-author/new-author.component';
 import { Author } from './author';
 import { reduce, map } from 'rxjs/operators';
-import { ComponentPortal, CdkPortal } from '@angular/cdk/portal';
-import { FilePreviewOverlayRef } from '../_services/file-preview-overlay-ref';
 
 @Component({
   selector: 'app-author',
@@ -57,10 +55,6 @@ export class AuthorComponent implements OnInit {
         this.authorService.delete(author.id).subscribe();
       }
     });
-  }
-
-  changeTitle() {
-    this.title = 'change author';
   }
 
   getTotalAge() {
