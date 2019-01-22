@@ -17,6 +17,7 @@ import { CdkLayoutComponent } from './cdk/cdk-layout/cdk-layout.component';
 import { CdkObserversComponent } from './cdk/cdk-observers/cdk-observers.component';
 import { ObserverTitleComponent } from './cdk/cdk-observers/observer-title/observer-title.component';
 import { AccessComponent } from './cdk/access/access.component';
+import { ScrollComponent } from './cdk/scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AccessComponent } from './cdk/access/access.component';
     SearchAuthorComponent,
     CdkLayoutComponent,
     CdkObserversComponent,
-    AccessComponent
+    AccessComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,

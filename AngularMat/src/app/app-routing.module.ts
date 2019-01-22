@@ -8,6 +8,7 @@ import { AuthorComponent } from './author/author.component';
 import { DragComponent } from './cdk/drag/drag.component';
 import { CdkLayoutComponent } from './cdk/cdk-layout/cdk-layout.component';
 import { CdkObserversComponent } from './cdk/cdk-observers/cdk-observers.component';
+import { ScrollComponent } from './cdk/scroll/scroll.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'authors', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'layout', component: CdkLayoutComponent },
       { path: 'observer', component: CdkObserversComponent },
       { path: 'access', component: AccessComponent },
+      { path: 'scroll', component: ScrollComponent },
     ]
   },
   { path: 'login', component: LoginComponent },
