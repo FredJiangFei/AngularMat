@@ -14,13 +14,17 @@
     <ng-container *ngIf="!isScreenSmall()">
         <button mat-button [routerLink]="['/authors']">Authors</button>
         <button mat-button [routerLink]="['/books']">Books</button>
-        <button mat-button [routerLink]="['/drag']">Drag</button>
     </ng-container>
 
     <div id="page-actions-container"> </div>
 
-    <mat-menu #ComponentsMenu="matMenu">
-      <button [routerLink]="['/table']" mat-menu-item>Table</button>
+    <button mat-button [matMenuTriggerFor]="cdkmenu">
+      CDK
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #cdkmenu="matMenu">
+      <button mat-menu-item  [routerLink]="['/layout']">Layout</button>
+      <button mat-menu-item  [routerLink]="['/drag']">Drag</button>
     </mat-menu>
 
     <span class="fill-remaining-space"></span>

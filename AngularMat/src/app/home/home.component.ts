@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
-import { MatSidenav } from '@angular/material';
-import { CdkPortal } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +11,8 @@ export class HomeComponent implements OnInit {
   dir = 'ltr';
   private mediaMatcher = matchMedia(`(max-width: 720px)`);
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }

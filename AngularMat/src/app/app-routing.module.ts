@@ -1,3 +1,4 @@
+import { CdkLayoutComponent } from './cdk-layout/cdk-layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'books', component: BookComponent },
       { path: 'authors', component: AuthorComponent },
       { path: 'drag', component: DragComponent },
+      { path: 'layout', component: CdkLayoutComponent },
     ]
   },
   { path: 'login', component: LoginComponent },

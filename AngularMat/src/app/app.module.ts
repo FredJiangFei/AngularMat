@@ -14,6 +14,7 @@ import { DragComponent } from './drag/drag.component';
 import { ObserverTitleComponent } from './observer-title/observer-title.component';
 import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
 import { SearchAuthorComponent } from './search-author/search-author.component';
+import { CdkLayoutComponent } from './cdk-layout/cdk-layout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchAuthorComponent } from './search-author/search-author.component';
     DragComponent,
     ObserverTitleComponent,
     FilePreviewOverlayComponent,
-    SearchAuthorComponent
+    SearchAuthorComponent,
+    CdkLayoutComponent
   ],
   imports: [
     BrowserModule,
