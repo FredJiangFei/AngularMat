@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,9 @@ export class HomeComponent implements OnInit {
   dir = 'ltr';
   private mediaMatcher = matchMedia(`(max-width: 720px)`);
 
-  constructor() {
-   }
+  constructor(overlayContainer: OverlayContainer) {
+    // overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+  }
 
   ngOnInit() {
   }

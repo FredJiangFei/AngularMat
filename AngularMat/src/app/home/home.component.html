@@ -1,9 +1,11 @@
 <mat-sidenav-container [class.unicorn-dark-theme]="darkTheme" [dir]="dir">
     <mat-sidenav [opened]="isScreenSmall()" [mode]="'over'">
-      <mat-toolbar color="primary">  Angular Material </mat-toolbar>
+      <mat-toolbar color="primary">
+        Angular Material
+      </mat-toolbar>
       <mat-list role="list">
           <mat-list-item role="listitem" [routerLink]="['/authors']">Authors</mat-list-item>
-          <mat-list-item role="listitem" [routerLink]="['/drag']">Drag</mat-list-item>
+          <mat-list-item role="listitem" [routerLink]="['/theme']">Theme</mat-list-item>
         </mat-list>
     </mat-sidenav>
 
@@ -12,6 +14,7 @@
 
     <ng-container *ngIf="!isScreenSmall()">
         <button mat-button [routerLink]="['/authors']">Authors</button>
+        <button mat-button [routerLink]="['/theme']">Theme</button>
     </ng-container>
 
     <button mat-button [matMenuTriggerFor]="cdkmenu">

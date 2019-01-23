@@ -1,0 +1,76 @@
+<h1>Theme</h1>
+<mat-list role="list">
+  <mat-list-item role="listitem">
+    <b>● Primary</b> - Main colors most widely used across all screens and
+    components. <button mat-flat-button color="primary">Primary</button>
+  </mat-list-item>
+
+  <mat-list-item role="listitem">
+    <b>● Accent</b> - Also known as the secondary color. Used for floating
+    action buttons and interactive elements.
+    <button mat-flat-button color="accent">Accent</button>
+  </mat-list-item>
+
+  <mat-list-item role="listitem">
+    <b>● Warn</b> - Colors to convey error state.
+    <button mat-flat-button color="warn">Warn</button>
+  </mat-list-item>
+
+  <mat-list-item role="listitem">
+    <b>● Foreground</b> - Used for text and icons.
+  </mat-list-item>
+
+  <mat-list-item role="listitem">
+    <b>● Background</b> - Colors used for element backgrounds.
+  </mat-list-item>
+</mat-list>
+
+<h2>Pre-built themes</h2>
+<mat-list>
+  <mat-list-item role="listitem">● deeppurple-amber </mat-list-item>
+  <mat-list-item role="listitem">● indigo-pink </mat-list-item>
+  <mat-list-item role="listitem">● pink-bluegrey </mat-list-item>
+  <mat-list-item role="listitem">● purple-green </mat-list-item>
+</mat-list>
+
+<h2>Defining a custom theme</h2>
+<mat-list>
+  <mat-list-item role="listitem">
+    ● mat-core() This includes all common styles that are used by multiple
+    components. This should only be included once in your application.
+  </mat-list-item>
+  <mat-list-item role="listitem"> ● Defines theme </mat-list-item>
+</mat-list>
+
+<h2>Overlay-based components</h2>
+<h2>Theming only certain components</h2>
+<mat-list>
+  <mat-list-item role="listitem"
+    >@include mat-core-theme($candy-app-theme);</mat-list-item
+  >
+  <mat-list-item role="listitem"
+    >@include mat-button-theme($candy-app-theme);</mat-list-item
+  >
+  <mat-list-item role="listitem"
+    >@include mat-checkbox-theme($candy-app-theme);</mat-list-item
+  >
+</mat-list>
+
+<h2>Generate color palettes</h2>
+<img src="../../assets/images/material-design-red-palette.png" />
+
+<mat-list>
+  <mat-list-item role="listitem"
+    ><code>$custom-theme-primary: mat-palette($mat-light-blue);</code></mat-list-item
+  >
+  <mat-list-item role="listitem">
+    <code
+      >$custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);</code
+    >
+  </mat-list-item>
+  <mat-list-item role="listitem"
+    ><code>$custom-theme-warn: mat-palette($mat-red);</code></mat-list-item
+  >
+</mat-list>
+
+<h2>mat-palette</h2>

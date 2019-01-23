@@ -10,6 +10,7 @@ import { CdkLayoutComponent } from './cdk/cdk-layout/cdk-layout.component';
 import { CdkObserversComponent } from './cdk/cdk-observers/cdk-observers.component';
 import { ScrollComponent } from './cdk/scroll/scroll.component';
 import { OverlayComponent } from './cdk/overlay/overlay.component';
+import { ThemeComponent } from './theme/theme.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'authors', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'scroll', component: ScrollComponent },
       { path: 'overlay', component: OverlayComponent },
       { path: 'portal', component: PortalComponent },
+      { path: 'theme', component: ThemeComponent },
     ]
   },
   { path: 'login', component: LoginComponent },

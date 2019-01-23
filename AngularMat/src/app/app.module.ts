@@ -20,6 +20,7 @@ import { ScrollComponent } from './cdk/scroll/scroll.component';
 import { OverlayComponent } from './cdk/overlay/overlay.component';
 import { PortalComponent } from './cdk/portal/portal.component';
 import { PortalExampleComponent } from './cdk/portal/portal-example/portal-example.component';
+import { ThemeComponent } from './theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PortalExampleComponent } from './cdk/portal/portal-example/portal-examp
     ScrollComponent,
     OverlayComponent,
     PortalComponent,
-    PortalExampleComponent
+    PortalExampleComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
