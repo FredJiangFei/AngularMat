@@ -1,0 +1,34 @@
+@import '~@angular/material/theming';
+
+
+@mixin ml-file-tree-theme($theme) {
+  $primary: map-get($theme, primary);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .ml-file-list-item {
+    &:hover {
+      background-color: mat-color($background, hover);
+    }
+
+    color: mat-color($primary);
+  }
+}
+
+.ml-file-list {
+  list-style: none;
+}
+
+.ml-file-list-item {
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 0.4em 0.4em;
+  line-height: 1.4;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+

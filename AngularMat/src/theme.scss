@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import './custom-theme.scss';
 
 @include mat-core();
 
@@ -37,17 +38,17 @@ $am-primary: (
 );
 
 
-$candy-app-primary: mat-palette($am-primary);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A500);
-$candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
-@include angular-material-theme($candy-app-theme);
-
+$app-primary: mat-palette($am-primary);
+$app-accent:  mat-palette($mat-pink, A200, A100, A500);
+$app-theme:   mat-light-theme($app-primary, $app-accent);
+@include angular-material-theme($app-theme);
+@include custom-theme($app-theme);
 
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-deep-orange);
 $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
-
 .unicorn-dark-theme {
   @include angular-material-theme($dark-theme);
+  @include custom-theme($dark-theme);
 }

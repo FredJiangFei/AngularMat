@@ -21,6 +21,7 @@ import { OverlayComponent } from './cdk/overlay/overlay.component';
 import { PortalComponent } from './cdk/portal/portal.component';
 import { PortalExampleComponent } from './cdk/portal/portal-example/portal-example.component';
 import { ThemeComponent } from './theme/theme.component';
+import { FileTreeComponent } from './file-tree/file-tree.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ThemeComponent } from './theme/theme.component';
     OverlayComponent,
     PortalComponent,
     PortalExampleComponent,
-    ThemeComponent
+    ThemeComponent,
+    FileTreeComponent
   ],
   imports: [
     BrowserModule,

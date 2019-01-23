@@ -11,6 +11,7 @@ import { CdkObserversComponent } from './cdk/cdk-observers/cdk-observers.compone
 import { ScrollComponent } from './cdk/scroll/scroll.component';
 import { OverlayComponent } from './cdk/overlay/overlay.component';
 import { ThemeComponent } from './theme/theme.component';
+import { FileTreeComponent } from './file-tree/file-tree.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'authors', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'overlay', component: OverlayComponent },
       { path: 'portal', component: PortalComponent },
       { path: 'theme', component: ThemeComponent },
+      { path: 'filetree', component: FileTreeComponent },
     ]
   },
   { path: 'login', component: LoginComponent },

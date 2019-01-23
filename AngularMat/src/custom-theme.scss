@@ -1,0 +1,5 @@
+@import './app/file-tree/file-tree.component.scss';
+
+@mixin custom-theme($theme) {
+  @include ml-file-tree-theme($theme);
+}
