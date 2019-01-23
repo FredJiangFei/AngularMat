@@ -19,7 +19,7 @@ import {
 @Component({
   selector: 'app-search-author',
   template: `
-    <ng-template #searchContent>
+    <ng-template cdkPortal>
       <ng-content></ng-content>
     </ng-template>
   `,
@@ -27,7 +27,7 @@ import {
 })
 export class SearchAuthorComponent implements OnInit, AfterViewInit, OnDestroy {
   private portalHost: PortalHost;
-  @ViewChild('searchContent') content;
+  @ViewChild(CdkPortal) portal;
 
   constructor(
     private resolver: ComponentFactoryResolver,
@@ -47,8 +47,7 @@ export class SearchAuthorComponent implements OnInit, AfterViewInit, OnDestroy {
       this.injector
     );
 
-    const portal = new TemplatePortal(this.content, this.ref);
-    this.portalHost.attach(portal);
+    this.portalHost.attach(this.portal);
   }
 
   ngOnDestroy(): void {

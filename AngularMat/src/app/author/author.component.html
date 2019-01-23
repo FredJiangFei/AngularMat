@@ -7,7 +7,7 @@
 
 <app-search-author>
   <mat-form-field>
-    <input matInput placeholder="Search">
+    <input matInput placeholder="Search" #search (keyup)="searchUser(search.value)">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </app-search-author>
