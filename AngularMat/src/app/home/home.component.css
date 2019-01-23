@@ -17,3 +17,13 @@
 .mat-drawer-container{
   background-color: rgb(187, 184, 184);
 }
+
+#search-outlet {
+  flex: 1;
+  display: flex;
+}
+
+::ng-deep #search-outlet mat-form-field {
+  flex: 1;
+  font-size: 14px;
+}
