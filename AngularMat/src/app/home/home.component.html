@@ -3,7 +3,6 @@
       <mat-toolbar color="primary">  Angular Material </mat-toolbar>
       <mat-list role="list">
           <mat-list-item role="listitem" [routerLink]="['/authors']">Authors</mat-list-item>
-          <mat-list-item role="listitem" [routerLink]="['/books']">Books</mat-list-item>
           <mat-list-item role="listitem" [routerLink]="['/drag']">Drag</mat-list-item>
         </mat-list>
     </mat-sidenav>
@@ -13,10 +12,7 @@
 
     <ng-container *ngIf="!isScreenSmall()">
         <button mat-button [routerLink]="['/authors']">Authors</button>
-        <button mat-button [routerLink]="['/books']">Books</button>
     </ng-container>
-
-    <div id="page-actions-container"> </div>
 
     <button mat-button [matMenuTriggerFor]="cdkmenu">
       CDK
@@ -28,9 +24,11 @@
       <button mat-menu-item  [routerLink]="['/drag']">Drag</button>
       <button mat-menu-item  [routerLink]="['/observer']">Observer</button>
       <button mat-menu-item  [routerLink]="['/scroll']">Scroll</button>
+      <button mat-menu-item  [routerLink]="['/overlay']">Overlay</button>
+      <button mat-menu-item  [routerLink]="['/portal']">Portal</button>
     </mat-menu>
 
-    <span class="fill-remaining-space"></span>
+    <div id="search-outlet"></div>
 
     <img class="avatar" src="../../../assets/images/user.png">
 

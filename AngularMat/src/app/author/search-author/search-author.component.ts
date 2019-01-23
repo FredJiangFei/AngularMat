@@ -7,45 +7,47 @@ import {
   ComponentFactoryResolver,
   Injector,
   ApplicationRef,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
-import { PortalHost, DomPortalHost, CdkPortal, TemplatePortal } from '@angular/cdk/portal';
+import {
+  PortalHost,
+  DomPortalHost,
+  CdkPortal,
+  TemplatePortal
+} from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-search-author',
   template: `
-  <ng-template cdkPortal #pageActions>
-    <ng-content></ng-content>
-  </ng-template>
+    <ng-template #searchContent>
+      <ng-content></ng-content>
+    </ng-template>
   `,
   styles: []
 })
 export class SearchAuthorComponent implements OnInit, AfterViewInit, OnDestroy {
   private portalHost: PortalHost;
-  @ViewChild('pageActions') pageActionsTmplRef;
+  @ViewChild('searchContent') content;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver,
+    private resolver: ComponentFactoryResolver,
     private injector: Injector,
     private appRef: ApplicationRef,
-    private viewContainerRef: ViewContainerRef
+    private ref: ViewContainerRef
   ) {}
 
   ngOnInit() {}
 
   ngAfterViewInit(): void {
+    const selector = document.querySelector('#search-outlet');
     this.portalHost = new DomPortalHost(
-      document.querySelector('#page-actions-container'),
-      this.componentFactoryResolver,
+      selector,
+      this.resolver,
       this.appRef,
       this.injector
     );
-    console.log(this.portalHost);
 
-    const portal = new TemplatePortal(
-      this.pageActionsTmplRef,
-      this.viewContainerRef
-    );
+    const portal = new TemplatePortal(this.content, this.ref);
     this.portalHost.attach(portal);
   }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ObserversModule } from '@angular/cdk/observers';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { PortalModule } from '@angular/cdk/portal';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -80,7 +81,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     DragDropModule,
     LayoutModule,
     ObserversModule,
-    OverlayModule
+    OverlayModule,
+    PortalModule
   ]
 })
 export class MaterialModule {}

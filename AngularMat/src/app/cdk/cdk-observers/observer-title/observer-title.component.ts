@@ -12,7 +12,6 @@ export class ObserverTitleComponent implements OnInit {
   }
 
   projectContentChanged(e) {
-    console.log('content changed');
     console.log(e);
   }
 }

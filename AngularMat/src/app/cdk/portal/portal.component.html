@@ -1,0 +1,19 @@
+<h1>Portals</h1>
+
+<p>
+  the portal (which - as mentioned - is either a ComponentPortal or TemplatePortal)
+</p>
+<p>
+  the portal host which is the so-called “open slot” where we want to render our dynamic content (our portal).
+</p>
+
+<h3>The portal outlet is below:</h3>
+
+<div class="example-portal-outlet">
+  <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
+</div>
+
+<ng-template cdkPortal #templatePortalContent>Template portal</ng-template>
+
+<button (click)="selectedPortal = componentPortal">Render component portal</button>
+<button (click)="selectedPortal = templatePortal">Render template portal</button>

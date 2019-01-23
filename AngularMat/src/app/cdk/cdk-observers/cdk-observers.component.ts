@@ -14,5 +14,4 @@ export class CdkObserversComponent implements OnInit {
   changeTitle() {
     this.title += ' changed';
   }
-
 }

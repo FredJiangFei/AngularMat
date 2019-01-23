@@ -19,8 +19,7 @@ export class AuthorComponent implements OnInit {
 
   constructor(
     private authorService: AuthorService,
-    private dialog: MatDialog,
-    private filePreview: FilePreviewOverlayService
+    private dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -61,9 +60,5 @@ export class AuthorComponent implements OnInit {
     return this.authors$.pipe(
       map(t => t.map(a => a.age).reduce((acc, value) => acc + value, 0))
     );
-  }
-
-  createOverlay() {
-    this.filePreview.open();
   }
 }

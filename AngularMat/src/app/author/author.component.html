@@ -1,16 +1,16 @@
 <app-observer-title>
   {{title}}
   <span class="fill-remaining-space"></span>
-  <button class="float-right ml-1" mat-flat-button color="primary" (click)="createOverlay()">Create overlay</button>
+
   <button class="float-right" mat-flat-button color="primary" (click)="showNewModal()">Add</button>
 </app-observer-title>
 
-<!-- <app-search-author>
+<app-search-author>
   <mat-form-field>
     <input matInput placeholder="Search">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
-</app-search-author> -->
+</app-search-author>
 
 <mat-table [dataSource]="authors$ | async">
   <ng-container matColumnDef="id">
